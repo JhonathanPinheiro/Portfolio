@@ -1,4 +1,4 @@
-import { cn } from "@/app/utils/cn"
+import { cn } from "@/utils/cn"
 import Link from "next/link"
 import {usePathname} from 'next/navigation'
 
@@ -7,7 +7,7 @@ type NavItemProps = {
     href: string
 }
 
-export const NavItem = ({ label, href }:NavItemProps) => {
+export default function NavItem ({ label, href }:NavItemProps) {
     const pathname = usePathname()
 
     const isActive = pathname === href;

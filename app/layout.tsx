@@ -1,7 +1,7 @@
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
-import { Header } from './components/Header'
+import { Header } from '../components/molecules'
 
 const inter = Inter({
   variable: '--font-inter',

@@ -1,8 +1,8 @@
 'use client'
 
+import { NavItem } from "@/components/atoms"
 import Image from "next/image"
 import Link from "next/link"
-import { NavItem } from "./nav-itens"
 
 const NAV_ITENS = [
     {
@@ -15,7 +15,7 @@ const NAV_ITENS = [
     }
 ]
 
-export const Header = () => {
+export default function Header () {
     return (
         <header className="absolute top-0 w-full z-10 h-24 flex items-center justify-center">
             <div className="container flex items-center justify-between">
