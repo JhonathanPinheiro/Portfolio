@@ -1,5 +1,5 @@
-import NavItem from './NavItem'
+import NavItem from "./NavItem";
+import TechBadge from "./TechBadge";
+import Button from "./Button";
 
-export {
-    NavItem
-}
+export { NavItem, TechBadge, Button };
