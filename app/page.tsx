@@ -1,9 +1,10 @@
-import HeroSection from "@/components/organisms/home/Hero";
+import { Home } from "@/components/organisms";
 
-export default async function Home() {
+export default async function HomePage() {
   return (
     <>
-      <HeroSection/>
+      <Home.Hero />
+      <Home.KnownTechs />
     </>
-  )
+  );
 }
