@@ -6,6 +6,7 @@ export default async function HomePage() {
       <Home.Hero />
       <Home.KnownTechs />
       <Home.HighlightedProjects />
+      <Home.WorkExperience />
     </>
   );
 }

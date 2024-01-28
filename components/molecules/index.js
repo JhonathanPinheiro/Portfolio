@@ -1,5 +1,4 @@
-import Header from './Header'
+import Header from "./Header";
+import ExperienceItem from "../molecules/ExperienceItem";
 
-export {
-    Header
-}
+export { Header, ExperienceItem };
