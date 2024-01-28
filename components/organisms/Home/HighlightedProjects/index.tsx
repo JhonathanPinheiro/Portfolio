@@ -1,9 +1,5 @@
-import {
-  HorizontalDivider,
-  Link,
-  ProjectCard,
-  SectionTitle,
-} from "@/components/atoms";
+import { HorizontalDivider, Link, SectionTitle } from "@/components/atoms";
+import { ProjectCard } from "@/components/molecules";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function HighlightedProjectsSection() {

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import TechBadge from "../TechBadge";
-import Link from "../Link";
+import TechBadge from "../../atoms/TechBadge";
+import Link from "../../atoms/Link";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function ProjectCard() {
