@@ -1,5 +1,5 @@
 import { HorizontalDivider, Link, SectionTitle } from "@/components/atoms";
-import { ProjectCard } from "@/components/molecules";
+import { ProjectCardItem } from "@/components/molecules";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function HighlightedProjectsSection() {
@@ -9,9 +9,9 @@ export default function HighlightedProjectsSection() {
       <HorizontalDivider className="mb-16" />
 
       <div>
-        <ProjectCard />
+        <ProjectCardItem />
         <HorizontalDivider className="my-16" />
-        <ProjectCard />
+        <ProjectCardItem />
         <HorizontalDivider className="my-16" />
 
         <p className="flex items-center gap-1.5">
