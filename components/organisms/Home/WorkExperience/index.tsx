@@ -1,7 +1,12 @@
 import { SectionTitle } from "@/components/atoms";
 import { ExperienceItem } from "@/components/molecules";
+import { WorkExperience as IWorkExperience } from "@/types/work-experience";
 
-export default function WorkExperienceSection() {
+type WorkExperiencesProps = {
+  experiences: IWorkExperience[]
+}
+
+export default function WorkExperienceSection({ experiences }: WorkExperiencesProps) {
   return (
     <section className="container flex flex-col gap-10 py-16 md:flex-row md:gap-4 lg:gap-16">
       <div className="max-w-[420px]">
@@ -16,8 +21,14 @@ export default function WorkExperienceSection() {
       </div>
 
       <div className="flex flex-col gap-4">
-        <ExperienceItem />
-        <ExperienceItem />
+        {
+          experiences?.map(experience => (
+            <ExperienceItem
+            key={experience.companyName}
+            experience={experience}
+            />
+          ))
+        }
       </div>
     </section>
   );

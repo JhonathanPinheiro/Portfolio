@@ -30,7 +30,7 @@ export default function Header () {
 
                 <nav className="flex items-center gap-4 sm:gap-10">
                     {
-                        NAV_ITENS.map(item => (
+                        NAV_ITENS?.map(item => (
                             <NavItem key={item.label} {...item} />
                         ))
                     }
