@@ -9,7 +9,7 @@ type HeroSectionProps = {
   homeInfo: HomePageInfo;
 };
 
-export default function ({ homeInfo }: HeroSectionProps) {
+export default function HeroSection ({ homeInfo }: HeroSectionProps) {
   const handleContact = () => {
     const contactSection = document.querySelector("#contact");
     if (contactSection) {
