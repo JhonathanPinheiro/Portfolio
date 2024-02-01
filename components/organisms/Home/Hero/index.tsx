@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, TechBadge, RichText, CMSIcon } from "@/components/atoms";
+import { Button, RichText, CMSIcon } from "@/components/atoms";
 import { HomePageInfo } from "@/types/page-info";
 import Image from "next/image";
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -21,16 +21,10 @@ export default function HeroSection ({ homeInfo }: HeroSectionProps) {
     <section className="flex w-full flex-col justify-end bg-hero-image bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:h-[735px] lg:pb-[110px]">
       <div className="container flex flex-col-reverse items-start justify-between lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
-          <p className="font-mono text-emerald-400">Olá, meu nome é</p>
+          <p className="font-mono text-emerald-400">Olá, me chamo</p>
           <h2 className="mt-2 text-4xl font-medium">Jhonathan Pinheiro</h2>
           <div className="my-6 text-sm text-gray-400 sm:text-base">
             <RichText content={homeInfo.introduction.raw} />
-          </div>
-
-          <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
-            {homeInfo.technologies?.map((tech, index) => (
-              <TechBadge name={tech.name} key={index} />
-            ))}
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-5 lg:mt-10">
@@ -58,7 +52,7 @@ export default function HeroSection ({ homeInfo }: HeroSectionProps) {
           height={404}
           src="/images/profile-pic.png"
           alt="Foto de perfil"
-          className="m-auto mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
+          className="my-auto mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
         />
       </div>
     </section>
