@@ -1,5 +1,5 @@
 import { ProjectDetails, ProjectSections } from "@/components/organisms/Projects";
-import { ProjectPageData, ProjectsPageData, ProjectsPageStaticData } from "@/types/page-info";
+import { ProjectPageData, ProjectsPageStaticData } from "@/types/page-info";
 import { fetchHygraphQuery } from "@/utils/fetchHygraphQuery";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -9,7 +9,6 @@ type ProjectProps = {
     slug: string
   }
 }
-
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   const query = `
   query ProjectQuery() {
@@ -42,7 +41,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   `
   const data = fetchHygraphQuery<ProjectPageData>(
     query,
-    1000 * 60 * 60 * 24, // 1 day
+    // 1000 * 60 * 60 * 24, // 1 day
   )
 
   return data
@@ -59,4 +58,38 @@ export default async function Project({ params: { slug } }: ProjectProps) {
       <ProjectSections sections={project.sections}/>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const query = `
+    query ProjectsSlugsQuery() {
+      projects(first: 100) {
+        slug
+      }
+    }
+  `
+  const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
+
+  return projects
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: ProjectProps): Promise<Metadata> {
+  const data = await getProjectDetails(slug)
+  const project = data.project
+
+  return {
+    title: project.title,
+    description: project.description.text,
+    openGraph: {
+      images: [
+        {
+          url: project.thumbnail.url,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  }
 }

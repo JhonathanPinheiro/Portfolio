@@ -3,6 +3,18 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { ContactForm, Footer, Header } from "../components/molecules";
 
+export const metadata = {
+  title: {
+    default: 'Home',
+    template: "%s | Jhonathan",
+  },
+  icons: [
+    {
+      url: '/favicon.svg'
+    }
+  ]
+};
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
