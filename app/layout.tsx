@@ -2,6 +2,7 @@ import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { ContactForm, Footer, Header } from "../components/molecules";
+import { Toaster } from "@/components/atoms";
 
 export const metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
+        <Toaster/>
         <Header />
         {children}
         <ContactForm />

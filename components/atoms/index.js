@@ -7,6 +7,7 @@ import Link from "./Link";
 import Button from "./Button";
 import RichText from "./RichText";
 import CMSIcon from "./CMSIcon";
+import Toaster from "./Toaster";
 
 export {
   NavItem,
@@ -18,4 +19,5 @@ export {
   Link,
   RichText,
   CMSIcon,
+  Toaster
 };
