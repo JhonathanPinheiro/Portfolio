@@ -50,7 +50,7 @@ export default function HeroSection ({ homeInfo }: HeroSectionProps) {
         <Image
           width={420}
           height={404}
-          src="/images/profile-pic.png"
+          src={homeInfo?.profilePicture?.url}
           alt="Foto de perfil"
           className="m-auto lg:mr-0 mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
         />
